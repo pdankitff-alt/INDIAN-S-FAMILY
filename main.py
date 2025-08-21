@@ -1,6 +1,3 @@
-from keep_alive import keep_alive
-keep_alive()
-
 import os
 os.system("pip install -r requirements.txt")
 import asyncio
@@ -126,9 +123,6 @@ async def on_command_completion(context: commands.Context) -> None:
             except Exception as e:
                 print(f'Command failed: {e}')
                 traceback.print_exc()
-
-from flask import Flask
-from threading import Thread
 
 async def main():
     async with client:
